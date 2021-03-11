@@ -1,0 +1,77 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="HV">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet'>
+
+    </head>
+
+<body>  
+    
+<div style="background-color: white;">
+    
+    <img id="butterfly" src="butterfly.png" alt="" onmouseover="imgToColor(this.id)"/>
+    <img id="fish" src="fish.png" alt="" onmouseover="imgToColor(this.id)"/>
+    <img id="theSimpsons" src="theSimpsons.png" alt="" onmouseover="imgToColor(this.id)"/>
+    <img id="elephant" src="elephant.png" alt="" onmouseover="imgToColor(this.id)"/>     
+
+
+</div>
+
+
+    <div> 
+        <h1 id="myHeader">Paint Your Own Picture</h1> 
+        <p>
+        Canvas width
+        <input type="text" id="width" placeholder="Enter width" onchange="setWidth(this.value)" />
+
+        Canvas height
+        <input type="text" id="height" placeholder="Enter height" onchange="setHeight(this.value)" />
+        </p>
+    </div>
+
+    <div>
+    <canvas id="canvas1" onmousedown="startPaint()" onmousemove="doPaint(event.offsetX, event.offsetY)" onmouseup="endPaint()"> </canvas>
+    </div>
+
+    <div>
+    <p> Brush color
+    <input type="color" id="change_color_3" value="#000" oninput="setColor(this.value)" />
+    &nbsp; &nbsp;
+    Brush size
+    <input type="range" id="myRange" min="0" max="50" value="5" oninput="resizeBrush(this.value)">
+    </p>
+    
+    <p>
+    Background color
+    <input type="color" id="change_color_2" value="white" oninput="changeColor_2()" />    
+    &nbsp; &nbsp;
+    Background reset
+    <input type="button" id="reset_color" value="Reset" onclick="resetColor()" />
+    </p>
+    
+    <input type="button" id="clear_canvas" value="Clean" onclick="clearCanvas()" />
+    </div>
+<br>
+<br>
+<br>
+<div style="background-color: white;">
+    <img id="car" src="car.png" alt="imgToColor(img)" onmouseover="imgToColor(this.id)"/>
+    <img id="flower" src="flower.jpg" alt="" onmouseover="imgToColor(this.id)"/>    
+    <img id="pikachu" src="pikachu.png" alt="" onmouseover="imgToColor(this.id)"/>
+    <img id="helloKitty" src="helloKitty.png" alt="" onmouseover="imgToColor(this.id)"/> 
+</div>
+    <script src="script.js">
+    </script>
+   
+  
+    
+</body>
+
+</html>

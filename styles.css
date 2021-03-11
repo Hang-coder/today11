@@ -1,0 +1,57 @@
+body {
+    
+  /*background-image: url('flower-4865379__340.jpg');*/
+   /*background-image: url('myImage.png');*/
+   background-image: url('bg5.jpg');
+   
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1 {
+  color: rgb(255, 11, 255);
+  font-size: 3em;
+  font-family: 'Yellowtail';
+}
+
+
+div {
+  
+  padding: 10px;
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+p {
+  
+  font-size: 1.8em;
+  font-weight: bold;
+  color: rgb(255, 36, 255);
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+canvas {
+  border: 1px solid gray;  
+}
+
+input[type="button"] {
+  background-color: #16f51e; /* Green */
+  border: none;
+  color:rgb(216, 29, 216);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  /*box-shadow: 0 9px rgb(233, 245, 63);*/
+  box-shadow: 5px 5px blue, 10px 10px red, 15px 15px rgb(247, 243, 31);
+}
