@@ -39,7 +39,7 @@ canvas {
   border: 1px solid gray;  
 }
 
-input[type="button"] {
+input[type="button"], button {
   background-color: #16f51e; /* Green */
   border: none;
   color:rgb(216, 29, 216);

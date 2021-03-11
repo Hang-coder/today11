@@ -5,6 +5,12 @@ var radius = 5;
 // only paint if mouse is being dragged (moved while the button is pressed)
 var isPainting = false;
 
+download_img = function(el) {
+  // get image URI from canvas object
+  var imageURI = paintcanvas.toDataURL("image/jpg");
+  el.href = imageURI;
+};
+
 function imgToColor(id) {
     var image = document.getElementById(id);
     context.drawImage(image, 30, 30, paintcanvas.width-60, paintcanvas.height-60);
