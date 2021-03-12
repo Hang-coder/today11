@@ -1,7 +1,7 @@
 body {
     
   /*background-image: url('flower-4865379__340.jpg');*/
-   /*background-image: url('myImage.png');*/
+   /*background-image: url('myImage.png');        combo_background_1.png*/
    background-image: url('bg5.jpg');
    
   background-repeat: no-repeat;
@@ -13,6 +13,9 @@ h1 {
   color: rgb(255, 11, 255);
   font-size: 3em;
   font-family: 'Yellowtail';
+  background-image: url('header_background_1.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 
