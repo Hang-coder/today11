@@ -4,17 +4,27 @@ paintcanvas.width = 300;
 paintcanvas.height = 300;
 paintcanvas.style.backgroundColor = "#FFFFFF";
 var color = "black";
-var radius = 5;
+var radius = 10;
 // only paint if mouse is being dragged (moved while the button is pressed)
 var isPainting = false;
 
 function eraser() {
-  
+  color = "white";
+  radius = 5;
 }
 
-download_img = function(el) {
-  // get image URI from canvas object
-  var imageURI = paintcanvas.toDataURL("image/jpg");
+download_img = function(el) {  // get image URI from canvas object     
+  var destinationCanvas = document.createElement("canvas"); //create dummy canvas to fill background color
+  destinationCanvas.width = paintcanvas.width;  //same canvas size
+  destinationCanvas.height = paintcanvas.height;
+  var destCtx = destinationCanvas.getContext('2d');
+ destCtx.fillStyle = paintcanvas.style.backgroundColor;  
+ destCtx.fillRect(0,0,paintcanvas.width,paintcanvas.height);
+
+  destCtx.drawImage(paintcanvas, 0, 0); //draw paintcanvas ontop of background
+  var imageURI = destinationCanvas.toDataURL("image/jpg");
+
+  //var imageURI = paintcanvas.toDataURL("image/jpg"); //use these last 2 lines if not dl bg color
   el.href = imageURI;
 };
 
@@ -81,11 +91,8 @@ function resizeBrush(value) {
 
 function changeColor_2() {
   var background_color = document.getElementById("change_color_2").value;
-  document.getElementById('canvas1').style.backgroundColor = background_color;
-  //var c = document.getElementById("canvas1");
-  //var ctx = c.getContext("2d");
-  //ctx.fillStyle = color;
-  //ctx.fillRect(0, 0, c.width, c.height);
+  paintcanvas.style.backgroundColor = background_color; 
+  
 }
 
 function resetColor() {  
