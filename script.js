@@ -1,9 +1,16 @@
 var paintcanvas = document.getElementById("canvas1");
 var context = paintcanvas.getContext("2d");
+paintcanvas.width = 300;
+paintcanvas.height = 300;
+paintcanvas.style.backgroundColor = "#FFFFFF";
 var color = "black";
 var radius = 5;
 // only paint if mouse is being dragged (moved while the button is pressed)
 var isPainting = false;
+
+function eraser() {
+  
+}
 
 download_img = function(el) {
   // get image URI from canvas object
