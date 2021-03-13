@@ -9,11 +9,36 @@ body {
   background-size: cover;
 }
 
+#selectME {
+  color: rgb(255, 11, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.7em;
+  width: 800px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  background: whitesmoke;
+  border-radius: 10px;
+  position: relative;
+  animation: mymove1 10s infinite;
+}
+
+@keyframes mymove1 {
+  from {left: 0px;}
+  to {left: 300px;}
+}
+
+.mySlides {display:none}; 
+
+img {
+  height: 150px;
+}
+
 h1 {
   color: rgb(255, 11, 255);
   font-size: 3em;
   font-family: 'Yellowtail';
-  background-image: url('header_background_1.png');
+  /*background-image: url('header_background_1.png');*/
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -21,9 +46,9 @@ h1 {
 
 div {
   
-  padding: 10px;
+  padding: 5px;
   text-align: center;
-  width: 80%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   
@@ -62,8 +87,8 @@ input[type="button"] {
 button {
   background-color: grey; /* Green */
   border: 2px solid whitesmoke;
-  color: grey;
-  padding: 15px 32px;
+  color: white;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

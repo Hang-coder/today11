@@ -7,21 +7,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet'>
-
+        <!---<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        class="w3-button w3-light-grey"
+        class="w3-button w3-light-grey" 
+    -->
     </head>
 
-<body>  
+<body>
     
-<div style="background-color: white;">
+    <section id="selectME">Dress me with colors to make me beautiful! CLICK to select me!</section>
+
+    <!-- if want infinite scrolling banner for all images use this https://jsfiddle.net/sergdenisov/wb28eeh2/3/ -->
     
-    <img id="butterfly" src="butterfly.png" alt="" onmouseover="imgToColor(this.id)"/>
-    <img id="fish" src="fish.png" alt="" onmouseover="imgToColor(this.id)"/>
-    <img id="theSimpsons" src="theSimpsons.png" alt="" onmouseover="imgToColor(this.id)"/>
-    <img id="elephant" src="elephant.png" alt="" onmouseover="imgToColor(this.id)"/>     
-
-
-</div>
-
+    <div >
+        <div class="mySlides" style="background-color: white;">
+            <img id="pikachu" src="pikachu.png" alt="" onclick="imgToColor(this.id)"/>
+            <img id="helloKitty" src="helloKitty.png" alt="" onclick="imgToColor(this.id)"/> 
+            <img id="butterfly" src="butterfly.png" alt="" onclick="imgToColor(this.id)"/>
+            <img id="fish" src="fish.png" alt="" onclick="imgToColor(this.id)"/>            
+        </div>        
+        <div class="mySlides" style="background-color: white;">
+            <img id="theSimpsons" src="theSimpsons.png" alt="" onclick="imgToColor(this.id)"/>
+            <img id="elephant" src="elephant.png" alt="" onclick="imgToColor(this.id)"/>             
+            <img id="car" src="car.png" alt="imgToColor(img)" onclick="imgToColor(this.id)"/>
+            <img id="flower" src="flower.jpg" alt="" onclick="imgToColor(this.id)"/>  
+        </div>       
+    </div>
+    
+    <div >
+        <button onclick="plusDivs(-1)"> ❮ Prev </button>
+        <button onclick="plusDivs(1)"> Next ❯ </button>
+        <button class="demo" onclick="currentDiv(1)"> 1 </button> 
+        <button class="demo" onclick="currentDiv(2)"> 2 </button>         
+    </div>
+    
+   
 
     <div> 
         <h1 id="myHeader">Paint Your Own Picture</h1> 
@@ -46,7 +66,7 @@
     <input type="range" id="myRange" min="0" max="50" value="5" oninput="resizeBrush(this.value)">
     &nbsp; &nbsp;
     Eraser
-    <button type="button" onclick="eraser()" >Eraser</button>
+    <button type="button" onclick="eraser()" ></button>
 </p>
     
     <p>
@@ -66,12 +86,7 @@
 <br>
 <br>
 <br>
-<div style="background-color: white;">
-    <img id="car" src="car.png" alt="imgToColor(img)" onmouseover="imgToColor(this.id)"/>
-    <img id="flower" src="flower.jpg" alt="" onmouseover="imgToColor(this.id)"/>    
-    <img id="pikachu" src="pikachu.png" alt="" onmouseover="imgToColor(this.id)"/>
-    <img id="helloKitty" src="helloKitty.png" alt="" onmouseover="imgToColor(this.id)"/> 
-</div>
+
     <script src="script.js">
     </script>
    
